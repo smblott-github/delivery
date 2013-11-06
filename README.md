@@ -120,10 +120,3 @@ simply receive the data stream from the point at which it is when the client
 happens to connect.  This tends not to be a problem for multimedia data, for
 which frame-boundary markers allow players to recover from incomplete frames.
 
----------------------------------------
-
-TODO
-====
-
-Where the client command is just `cat`, arrange for the client to output the
-stream directly (which would save a process and a copy for each client).
