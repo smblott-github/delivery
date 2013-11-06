@@ -3,6 +3,10 @@ Delivery
 
 Stream the output of one command to multiple (dynamic) clients.
 
+This is a Unix utility that I wrote many years ago and have found super useful.
+I've never come across anything similar elsewhere, so I'm throwing it up here
+in case anybody else finds it useful too.
+
 Build
 =====
 
@@ -13,7 +17,7 @@ Just:
 Install
 =======
 
-Copy the binary wherever is convenient.  For example, one of:
+Copy the binary to wherever is convenient.  For example, one of:
 
    - `install -vm 0555 delivery ~/local/bin`
    - `sudo install -vm 0555 delivery /usr/local/bin`
@@ -51,7 +55,7 @@ the client is the MP3 stream.
 
 Further clients can  connect, and each receives its own copy of the output
 stream.  However, there is only ever *one* instance of the `encode.sh` script
-run, so only one instance of lame.
+run, so only one instance of `lame`.
 
 Clients may come and go.  When the final client disconnects, the server closes
 the `encode.sh` script and exits.  If the server is to run persistently,
@@ -96,7 +100,7 @@ The server obtains an exclusive lock on a file in `/tmp`.  Therefore, two or
 more servers with the same `BASENAME` cannot be run at the same time.  If no
 `BASENAME` option is provided, then one is derived from the name of the current
 working directory.  In such a case (so only if no `BASENAME` option is
-provided), no two or mare servers can be run in the same working directory.
+provided), no two or more servers can be run in the same working directory.
 
 Called as:
 
