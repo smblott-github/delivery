@@ -62,6 +62,11 @@ the `encode.sh` script and exits.  If the server is to run persistently,
 consider using `supervise` from D. J. Bernstein's excellent [Daemon Tools
 package](http://cr.yp.to/daemontools.html).
 
+Crude Illustration
+==================
+
+![Illustration](./FigIllustration.png "Illustration")
+
 Other Uses
 ==========
 
