@@ -35,7 +35,7 @@ stream MP3 to various devices throughout my house.  Unfortunately, a single
 have a *single* `lame` process converting the FM audio to MP3 and then multiple
 clients reading that process's output.  This is what `delivery` does.
 
-Write a script `encode.sh` which reads the FM audio and encodes it to MP3 on
+Write a script `encode.sh` (probably using `lame`) which reads the FM audio and encodes it to MP3 on
 standard output.  Then run:
 
   - `delivery -n tuner sh encode.sh`
@@ -45,8 +45,7 @@ Nothing happens.  Soon, a client comes along:
    - `delivery -n tuner -c cat`
 
 `delivery` connects the client to the server via a Unix domain socket in
-`/tmp`.  When this first client connects, the server calls the command (as
-indicated above), and arranges for the command's output to be provide as the
+`/tmp`.  When this first client connects, the server calls the command (`sh encode.sh`, here), and arranges for the command's standard output to be delivered as the
 standard input to the client's command (`cat`, here).  The standard output of
 the client is the MP3 stream.
 
