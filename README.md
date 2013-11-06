@@ -58,6 +58,18 @@ the `encode.sh` script and exits.  If the server is to run persistently,
 consider using `supervise` from D. J. Bernstein's excellent [Daemon Tools
 package](http://cr.yp.to/daemontools.html).
 
+Other Uses
+==========
+
+I'm not sure:
+
+   - I've used `delivery` to stream multiple streams from a DVB card to which only a single process can connect.
+
+   - I've also used `delivery` to fetch as single copy of an internet radio stream, then
+     multicast it to multiple players throughout the house.  It you're
+     listening to BBC Radio 4 on three players all day, the bandwidth starts to
+     add up.
+
 Arguments
 =========
 
